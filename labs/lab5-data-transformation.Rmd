@@ -1,0 +1,25 @@
+```{r}
+getwd()
+esol <- read.csv("data/delaney-processed.csv")
+head(esol)
+```
+
+`filter()`
+
+```{r}
+filter(esol, Number.of.Rings==0)
+```
+
+`select()`
+
+```{r}
+select(esol, -ESOL.predicted.log.solubility.in.mols.per.litre)
+```
+
+`mutate()`
+
+```{r}
+mutate(esol, 
+       mw_per_polarSurface = Molecular.Weight / Polar.Surface.Area, 
+       solubility_pred_error = (ESOL.predicted.log.solubility.in.mols.per.litre - measured.log.solubility.in.mols.per.litre) / ESOL.predicted.log.solubility.in.mols.per.litre)
+```
