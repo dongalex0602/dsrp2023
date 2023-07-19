@@ -1,9 +1,9 @@
 library(dplyr)
 library(ggplot2)
 
+# two new functions
 ifelse()
 case_when()
-#saving plots
 
 x <- 7
 ifelse(x<5, "small number", "big number")
