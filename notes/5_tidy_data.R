@@ -56,9 +56,11 @@ tidy_table4a <- pivot_longer(table4a,
                              cols = c(`1999`, `2000`),
                              names_to = "year",
                              values_to = "cases")
+tidy_table4a
+
 
 table4b # shows population data
-## how to picot table4b into a "tidy" format
+## how to pivot table4b into a "tidy" format
 tidy_table4b <- pivot_longer(table4b, 
                              cols = c(`1999`, `2000`), 
                              names_to = "year", 
